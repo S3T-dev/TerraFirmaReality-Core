@@ -22,3 +22,38 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# === Gradle ===
+.gradle/
+build/
+out/
+
+# Gradle wrapper (обычно НЕ игнорируют wrapper jar/sh)
+!gradle/wrapper/gradle-wrapper.jar
+
+# === Forge/Minecraft run folder ===
+run/
+logs/
+crash-reports/
+eula.txt
+hs_err_pid*.log
+
+# === IntelliJ IDEA ===
+.idea/
+*.iml
+*.iws
+
+# === Eclipse ===
+.settings/
+.classpath
+.project
+
+# === VS Code ===
+.vscode/
+
+# === OS files ===
+.DS_Store
+Thumbs.db
+
+# === Forge dev caches (иногда появляются) ===
+forge-cache/
