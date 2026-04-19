@@ -28,6 +28,23 @@ sourceSets.main.resources {
 
 repositories {
     // Add here additional repositories if required by some of the dependencies below.
+    mavenLocal()
+    maven {
+        name = "NeoForged"
+        url = "https://maven.neoforged.net/releases"
+    }
+    maven {
+        name = "ParchmentMC"
+        url = "https://maven.parchmentmc.org"
+    }
+	// Modrinth
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+        content {
+            includeGroup "maven.modrinth"
+        }
+    }
 }
 
 base {
@@ -118,7 +135,13 @@ configurations {
 }
 
 dependencies {
-    // Example optional mod dependency with JEI
+    // TerraFirmaCraft and its dependency Patchouli
+    implementation "maven.modrinth:terrafirmacraft:${tfc_version}"
+    implementation "maven.modrinth:patchouli:${patchouli_version}"
+	implementation "maven.modrinth:create:${create_version}"
+	implementation "maven.modrinth:create-aeronautics:${createaeronautics_version}"
+    implementation "maven.modrinth:sable:${sable_version}"
+	// Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
     // compileOnly "mezz.jei:jei-${mc_version}-neoforge-api:${jei_version}"
