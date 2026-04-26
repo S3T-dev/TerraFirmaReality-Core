@@ -19,8 +19,8 @@ public class ModCreativeTabs {
             .icon(() -> new ItemStack(Items.IRON_INGOT)) // Set a representative icon
             .displayItems((parameters, output) -> {
                 // Add items here
-                output.accept(ModItems.EXAMPLE_ITEM.get());
-                output.accept(ModItems.EXAMPLE_BLOCK_ITEM.get());
+                //output.accept(ModItems.EXAMPLE_ITEM.get());
+                //output.accept(ModItems.EXAMPLE_BLOCK_ITEM.get());
             }).build());
 
     public static void register(IEventBus eventBus) {

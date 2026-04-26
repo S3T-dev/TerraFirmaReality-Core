@@ -67,7 +67,7 @@ public class riverFix {
 						boolean inRiver = isContraptionInRiver(serverSubLevel);
 						
 						Vector3d pos = serverSubLevel.logicalPose().position();
-						System.out.println("Contraption at (" + pos.x + ", " + pos.y + ", " + pos.z + ") is in river: " + inRiver);
+						//System.out.println("Contraption at (" + pos.x + ", " + pos.y + ", " + pos.z + ") is in river: " + inRiver);
 						
 						if (inRiver) {
 							net.minecraft.world.phys.Vec3 flow = getRiverFlow(serverSubLevel);
